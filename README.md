@@ -5,7 +5,7 @@ Code and notes from Passive Listening: this time with MSE!
 1. EEG Timeseries Import and multi-scale entropy (MSE) estimation (Code: 1. EEG_Import.m)
 2. Running partial least squares (PLS) on the MSE matrices averaged by task (Code: 2. MARCS_MSE_PLS.m)
 
-Results for these analyses need to be compiled into a structure array!
+All results are in the Matlab file "First_Results.mat". I have a giant structure array with all of the input data as well, but it's too big for Github, hahaha
 
 ## Results so far:
 ### Brain MSE PLS Analyses (Code 2.)
