@@ -18,7 +18,10 @@ The input data here, averaged across electrodes to show the overall MSE curves:
 And at the electrode level:
 ![Screenshot 2024-01-12 at 4 28 32 PM](https://github.com/fabsarah/Passive-Listening/assets/31863074/cddccbed-ff1d-4823-aca9-cf0c2e0c3937)
 
-I've projected these through the PLS results and zoomed in on the prime an sentence-first-position matrices for readability:
+I've projected these through the PLS results and zoomed in on the regular prime an sentence-first-position matrices for readability:
+![Screenshot 2024-01-15 at 3 24 34 PM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/0b8e8b46-25ad-4bed-befc-9aac19b2004f)
+What we see here is greater MSE at fine scales in the prime condition at the CPz electrode site, and broadly higher MSE at coarse scales at bilateral fronto-temporal (though moreso on the left), temporal, centro-parietal, parietal, and occipital electrode sites in the first-position sentence condition. The effect is a bit difficult to see in the figure, so I subtracted the sentence matrix from the prime matrix:
+![Screenshot 2024-01-15 at 3 28 19 PM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/76426b94-19a6-4c50-88c8-256ddd1e64e6)
 
 Next up, I ran a mean-centred PLS on just the sentences and just the primes. The sentences returned one significant LV (p = 0.028) that showed the contrast between sentences following regular and irregular primes. Some scale and localized differences here (output in First_Results.Lang_res):
 ![Screenshot 2024-01-15 at 2 33 12 PM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/57322e78-386a-4ccc-aa34-0c698c50fcc4)
