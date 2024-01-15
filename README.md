@@ -1,5 +1,5 @@
-# Passive-Listening
-Code and notes from Passive Listening: this time with MSE!
+# Rhythmic Priming
+Code and notes from Rhythmic Priming: this time with MSE!
 
 ## What has been done so far:
 1. EEG Timeseries Import and multi-scale entropy (MSE) estimation (Code: 1. EEG_Import.m)
