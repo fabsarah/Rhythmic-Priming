@@ -374,6 +374,106 @@ for i = 1:2
     colorbar
 end
 clear i start
+%% Separate out S1 and S2!
+Reg_all = (MARCS_vars.PLS_Block(2:3));
+Irreg_all = (MARCS_vars.PLS_Block(5:6));
+%% Do the language analysis again!
+clear option % make sure an old option file isn't kicking around
+
+% Now, make a new option file
+option.method = 1;% Mean-centred PLS
+option.num_perm = 500;
+option.num_boot = 100;
+
+indata_sentence = [cell2mat(Reg_all);cell2mat(Irreg_all)];
+nparts = 17;% number of participants you have
+ncond = 4;% number of conditions you have
+
+Lang2_res = pls_analysis({indata_sentence}, nparts, ncond,[option]);%running the PLS
+
+pvals = Lang2_res.perm_result.sprob;
+
+%% Plot the indata as lines:
+xlabs = {'Reg Prime S1','Reg Prime S2','Irreg Prime S1','Irreg Prime S2'};
+start = 1;
+figure
+for i = 1:4
+    plotdata = indata_sentence(start:start+16,:);
+    plotdata = mean(plotdata);
+    plotdata = reshape(plotdata,64,[]);
+    plotdata = mean(plotdata);
+    plot(plotdata,'LineWidth',2)
+    hold on
+    grid on
+    start = start+17;
+end
+    xlabel('MSE Scale')
+    legend(xlabs,'FontSize',16)
+    title('Indata Sentences only','FontSize',16)
+clear i start
+%% Step 4: Plot mean-centred PLS results
+
+res =Lang2_res; % what results you want to plot
+LV = 1;% What LV you want to plot
+p = res.perm_result.sprob(LV);% the p-value of that LV
+headline = sprintf('Language Res, p = %f',p);% the title with the p value
+xlabs = {'Reg Prime S1','Reg Prime S2','Irreg Prime S1','Irreg Prime S2'};
+
+figure
+subplot(1,2,1)
+z = res.boot_result.orig_usc;
+limit = length(z);
+bar(z(:,LV))
+hold on
+yneg = res.boot_result.llusc(1:limit,LV);
+ypos = res.boot_result.ulusc(1:limit,LV);
+errorbar(1:length(z(1:limit,LV)),z(1:limit,LV),yneg-z(1:limit,LV),ypos-z(1:limit,LV),'.')
+colorbar off
+grid on
+xlim([0 length(z)+1])
+xticks(1:length(z))
+xticklabels(xlabs)
+xtickangle(45)
+title(headline,'FontSize',16)
+
+x = (res.boot_result.compare_u(:,LV));
+x(abs(x)<2) = nan;
+plotdata = reshape(x,[],40);
+subplot(1,2,2)
+shower_tile_plot(plotdata);
+colormap(rgb)
+clim([-4 4])
+colorbar
+xticks(5:5:40)
+yticks([])
+%yticklabels()     
+ylabel('Electrodes')
+xlabel('MSE Scale')
+title(sprintf('MSE Matrix LV %d',LV),'FontSize',16)
+
+clear res LV p xlabs K limit ypos yneg ans x z plotdata headline
+% Now we're getting somewhere! 
+%% Plot the indata as images:
+xlabs = {'Reg Prime S1','Reg Prime S2','Irreg Prime S1','Irreg Prime S2'};
+start = 1;
+figure
+for i = 1:4
+    plotdata = indata_sentence(start:start+16,:);
+    plotdata = mean(plotdata);
+    plotdata = reshape(plotdata,64,[]);
+    subplot(2,2,i)
+    imagesc(plotdata)
+    %colormap(parula)
+    colormap(rgb(1:11,:))%still not super happy with interpretability here...need more colours
+    clim([0 0.9])
+    grid on
+    ylabel('Electrode')
+    xlabel('MSE Scale')
+    title(xlabs{i},'FontSize',16)
+    start = start+17;
+    colorbar
+end
+clear i start
 %% Add everything to the array:
 MARCS_vars.MSE_vec = MSE_vec;
 MARCS_vars.MSE_Block = MSE_Block;
@@ -381,4 +481,5 @@ MARCS_vars.PLS_Block = PLS_Block;
 
 MARCS_vars.Results.Cond_res = Cond_res;
 MARCS_vars.Results.Lang_res = Lang_res;
+MARCS_vars.Results.Lang2_res = Lang2_res;
 MARCS_vars.Results.Prime_res = Prime_res;
