@@ -36,7 +36,24 @@ It's a very subtle effect, here's the matrices after subtracting the irregular p
 The mean curves are damn near identical which points to these specific locations being the driving force behind the effect.:
 ![Screenshot 2024-01-12 at 4 42 14 PM](https://github.com/fabsarah/Passive-Listening/assets/31863074/6814958f-cd87-403e-bb52-0a2b60e8a52b)
 
+For extra looking at-ed-ness, I ran the sentences separated into first and second position divided up by their prime condition. We have two significant LVs (p<0.01 and p = 0.02 respectively). The first shows the contrast between sentences in first position (S1) vs sentences in the second position (S2):
+![Screenshot 2024-01-19 at 11 23 11 AM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/418fc5a3-7b86-4739-853b-abaa49121e11)
+
+This effect is driven by higher MSE values at finer scales in S2 across select electrodes at frontal, central, and parieto-occipital sites bilaterally:
+![Screenshot 2024-01-19 at 11 10 05 AM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/58c943f7-c113-4904-ad6e-9f18dd7caf4a)
+
+While the second shows the contrast between regular and irregular primes:
+![Screenshot 2024-01-19 at 11 22 29 AM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/205d92e9-fd92-452e-85fd-3da87ba9e026)
+
+The effect is weaker here (which is normal for this type of analysis, so nothing to worry about there). I didn't threshold the LV plot as much as I did for the first LV, so we should interpret this one cautiously. The effect shows higher MSE at left anterior, temporal, and parietal electrode sites, and right fronto-central, centro-parieral, and parietal sites. MSE is higher at moderate-to-coarse scales in left fronto central and temporo-parietal electrode sites and at right fronto-central and parietal sites:
+![Screenshot 2024-01-19 at 11 17 21 AM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/07d3a2a0-a6ed-4dd4-a294-a2d4e95fa36a)
+
+This can be seen overall in the MSE curves (neat!):
+![Screenshot 2024-01-19 at 11 24 29 AM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/50eb8774-aafb-448e-99f3-c621ad9ca37b)
+What this shows is that both sentence presentations follow broad similar MSE profiles, the difference in in the peaks. MSE peakes higher at finer scales for second position sentences (can discuss why this is...maybe brain is already primed from the prime (lol) and the first sentence), and shows higher MSE at coarse scales for sentences following regular primes. This could be a case of irregular primes getting "stuck" in local processing without progressing to global processing the same way sentences following a regular prime do. Extremely hypothetical, but let's discuss further...
+
 Finally, I ran just the prime stimuli presentations. This analysis returned one LV (p<0.001) showing higher MSE at coarser scales broadly-distributed across bilateral electrodes during irregular primes (output in First_Results.Prime_res):
+
 ![Screenshot 2024-01-15 at 11 57 22 AM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/131babd2-f9b3-4e80-9df3-f7cd26640c6e)
 
 The indata are here in "raw" form, projected through the PLS results to show the specific electrodes driving the effect:
@@ -47,7 +64,6 @@ And the mean MSE curves:
 ![Screenshot 2024-01-12 at 4 51 10 PM](https://github.com/fabsarah/Passive-Listening/assets/31863074/981225c5-0cbd-4a6c-9ec9-2573034e806d)
 
 ### So what does this tell us?
-When the data are all lumped in together, the perceptual differences between the presentation of the primes vs. the sentences eats up the variance in the model. When we break it down into prime vs sentences, we see more detail. I might try sentence 1 vs sentence 2 just to see if I can get EVEN MORE detail, but first, I need to figure out which electrodes are driving the effect in the language task.
+When the data are all lumped in together, the perceptual differences between the presentation of the primes vs. the sentences eats up the variance in the model. When we break it down into prime vs sentences, we see more detail. 
 
 In the prime-only model, things are pretty compelling - MSE is higher at coarser scales during the irregular prime. This indicates greater brain signal complexity...which is pleasingly intuitive! When stimuli are irregular, we need to work harder to parse them. And we can see that in these results. 
-
