@@ -13,7 +13,8 @@ I imported all the EEG data and broke it into epochs using the trigger informati
 ![Screenshot 2024-01-15 at 2 45 09 PM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/02147fd9-a1a9-45ad-939b-f3c593ab866f)
 
 The input data here, averaged across electrodes to show the overall MSE curves:
-![Screenshot 2024-01-12 at 4 25 04 PM](https://github.com/fabsarah/Passive-Listening/assets/31863074/d5ea4bbb-7995-4fc8-b427-ffa8ef95f838)
+![Screenshot 2024-01-19 at 2 09 45 PM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/a4fea228-43bf-429d-83f7-4f368425b9a1)
+
 
 And at the electrode level:
 ![Screenshot 2024-01-12 at 4 28 32 PM](https://github.com/fabsarah/Passive-Listening/assets/31863074/cddccbed-ff1d-4823-aca9-cf0c2e0c3937)
