@@ -28,8 +28,9 @@ Next up, I ran a mean-centred PLS on just the sentences and just the primes. The
 ![Screenshot 2024-01-15 at 2 33 12 PM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/57322e78-386a-4ccc-aa34-0c698c50fcc4)
 
 It looks like there's higher MSE over a group of electrodes bilaterally following *regular* primes:
-![Screenshot 2024-01-15 at 2 36 22 PM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/5a100a87-bede-48e6-8c0c-e17f3182a240)
+
 What this shows is higher MSE at fine scales in bilateral anterior, central, central-parietal, and parietal electrode sites; and higher MSE at mid and coarse scales in bilateral frontal sites during sentence perception following regular primes. 
+![Screenshot 2024-01-25 at 11 49 45 AM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/bd61a773-7fb2-4d24-9bb5-f764df43842d)
 
 It's a very subtle effect, here's the matrices after subtracting the irregular prime from the regular:
 ![Screenshot 2024-01-15 at 2 37 15 PM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/9a78f7b3-07c1-47c6-967c-544033256463)
