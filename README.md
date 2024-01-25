@@ -47,7 +47,7 @@ This effect is driven by higher MSE values at finer scales in S2 across select e
 While the second shows the contrast between regular and irregular primes:
 ![Screenshot 2024-01-19 at 11 22 29 AM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/205d92e9-fd92-452e-85fd-3da87ba9e026)
 
-The effect is weaker here (which is normal for this type of analysis, so nothing to worry about there). I didn't threshold the LV plot as much as I did for the first LV, so we should interpret this one cautiously. The effect shows higher MSE at left anterior, temporal, and parietal electrode sites, and right fronto-central, centro-parieral, and parietal sites. MSE is higher at moderate-to-coarse scales in left fronto central and temporo-parietal electrode sites and at right fronto-central and parietal sites:
+The effect is weaker here (which is normal for this type of analysis, so nothing to worry about there). I didn't threshold the LV plot as much as I did for the first LV, so we should interpret this one cautiously. The effect shows higher MSE at finer scales at left anterior, temporal, and parietal electrode sites, and right fronto-central, centro-parieral, and parietal sites. MSE is higher at moderate-to-coarse scales in left fronto central and temporo-parietal electrode sites and at right fronto-central and parietal sites:
 ![Screenshot 2024-01-19 at 11 17 21 AM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/07d3a2a0-a6ed-4dd4-a294-a2d4e95fa36a)
 
 This can be seen overall in the MSE curves (neat!):
@@ -60,7 +60,7 @@ Finally, I ran just the prime stimuli presentations. This analysis returned one 
 
 The indata are here in "raw" form, projected through the PLS results to show the specific electrodes driving the effect:
 ![Screenshot 2024-01-15 at 12 02 14 PM](https://github.com/fabsarah/Rhythmic-Priming/assets/31863074/f9d64f01-6bc7-48c4-8f67-7578d9bbdcae)
-What we have here is higher MSE at finer scales in the CPz electrode during the regular prime presentation. Overall, the patterns are quite similar, but there is a significant difference in clusters of electrodes in the left fronto-temporal and central electroder, in right anterior frontal electrodes, and in bilaretal centro-parietal, and paroeto-occipital electrodes. These electrode sites all show significantly higher MSE at coarser scales during the presentation of the irregular prime. 
+What we have here is higher MSE at finer scales in the CPz electrode during the regular prime presentation. Overall, the patterns are quite similar, but there is a significant difference in clusters of electrodes in the left fronto-temporal and central electrodes, in right anterior frontal electrodes, and in bilaretal centro-parietal, and paroeto-occipital electrodes. These electrode sites all show significantly higher MSE at coarser scales during the presentation of the irregular prime. 
 
 And the mean MSE curves:
 ![Screenshot 2024-01-12 at 4 51 10 PM](https://github.com/fabsarah/Passive-Listening/assets/31863074/981225c5-0cbd-4a6c-9ec9-2573034e806d)
