@@ -5,7 +5,7 @@ Code and notes from Rhythmic Priming: this time with MSE!
 1. EEG Timeseries Import and multi-scale entropy (MSE) estimation (Code: 1. EEG_Import.m)
 2. Running partial least squares (PLS) on the MSE matrices averaged by task (Code: 2. MARCS_MSE_PLS.m)
 3. MSE estimation on the stimulus files (Code: 3. Stimuli_MSE.m)
-4. Computed Procrustes distance (more on that later) between the brain MSE and stimuli MSE (Code: 4.
+4. Computed Procrustes distance (more on that later) between the brain MSE and stimuli MSE (Code: 4. MSE_Procrustes.m)
 
 All results are in the Matlab file "First_Results.mat". I have a giant structure array with all of the input data as well, but it's too big for Github, hahaha
 
